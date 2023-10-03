@@ -35,5 +35,12 @@ export class HeroDetailComponent implements OnInit {
     // makes the user go back by one page in their browser history
     this.location.back();
   }
+
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+    }
+  }
   
 }
