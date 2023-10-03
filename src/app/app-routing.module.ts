@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 // based on the path string, the corresponding component will be executed and shown in browser
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  // the : character in the path indicates that :id is a placeholder for a specific hero id
+  { path: 'detail/:id', component: HeroDetailComponent }
 ]
 
 // @NgModule intializes the router and starts it listening for browser location changes
