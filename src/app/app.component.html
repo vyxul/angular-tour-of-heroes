@@ -1,5 +1,6 @@
 <h1>
   {{ title }}
 </h1>
-<app-heroes></app-heroes>
+<!-- router-outlet is a router directive that became avialable to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule -->
+<router-outlet></router-outlet>
 <app-messages></app-messages>
