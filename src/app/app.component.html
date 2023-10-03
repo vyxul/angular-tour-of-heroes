@@ -1,6 +1,12 @@
 <h1>
   {{ title }}
 </h1>
+
+<nav>
+  <!-- routerLink is another directive from the RouterModule library, turns user lcicks into router navigations -->
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
 <!-- router-outlet is a router directive that became avialable to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule -->
 <router-outlet></router-outlet>
 <app-messages></app-messages>

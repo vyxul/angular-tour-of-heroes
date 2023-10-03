@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // based on the path string, the corresponding component will be executed and shown in browser
 const routes: Routes = [
-  { path: 'heroes', component: HeroesComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'heroes', component: HeroesComponent },
+  { path: 'dashboard', component: DashboardComponent }
 ]
 
 // @NgModule intializes the router and starts it listening for browser location changes
